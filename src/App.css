@@ -1,38 +1,326 @@
-.App {
-  text-align: center;
+.header-container {
+  background-color: rgb(248, 250, 251);
+  height: 80px;
+  display: flex;
+  /* border-left: 3px solid grey; */
+  align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-left: 3px solid grey;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 576px) {
+  .header-container1 {
+    justify-content: space-evenly;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input {
+  height: 30px;
+  width: 300px;
+  margin-left: 15px;
+  background-color: rgb(229, 221, 221);
+  border: none;
+  border-radius: 5px;
+  margin-right: 50px;
+  margin-right: 300px;
+}
+@media screen and ((min-width: 576px) and (max-width:1040px)) {
+  .input {
+    margin-right: 10px;
+  }
+}
+
+/* .header-heading {
+  font-size: 20px;
+  
+  width: 200px;
+  
+} */
+.logo {
+  width: 350px;
+  height: 50px;
+  /* border-right: 3px solid grey; */
+  padding-right: 80px;
+  padding-left: 10px;
+  background-color: transparent;
+}
+.header-select {
+  height: 30px;
+  width: 110px;
+  margin-left: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.image {
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  /* margin-left: 10px; */
+}
+.user-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+}
+
+.nav-container {
+  background-color: rgb(6, 6, 38);
+  /* height: 100px; */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.select {
+  border: none;
+  background-color: rgb(6, 6, 38);
+  font-size: 20px;
+  border-right: 3px solid grey;
+  /* width: 250px; */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dash-container {
+  background-color: rgb(241, 224, 224);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dash-container1 {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex-direction: column; */
+  /* height: 60px; */
+  /* padding: 2px; */
+  padding-left: 10px;
+}
+
+.user {
+  font-size: 25px;
+}
+span {
+  font-size: 20px;
+  color: grey;
+}
+
+/* .card-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+} */
+
+.orders-container {
+  border: 1px solid black;
+  width: 300px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.orders-details {
+  border: 1px solid black;
+  border-top: none;
+  width: 300px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.orders-heading {
+  font-size: 15px;
+  width: auto;
+}
+.tables {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+  border-radius: 5px;
+}
+
+.product-image {
+  width: 50px;
+  max-width: 120px;
+  height: 50px;
+  max-height: 120px;
+}
+
+/* popup */
+
+.pop-input {
+  height: 30px;
+  width: 300px;
+  /* margin-left: 15px; */
+  background-color: rgb(229, 221, 221);
+  border: none;
+  border-radius: 5px;
+  /* margin-right: 50px; */
+  /* margin-right: 300px; */
+}
+
+/* toggle button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* .form-control {
+  width: 250px;
+} */
+
+.form-image {
+  height: 100px;
+  width: 100px;
+  margin-left: 15px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  /* margin-left: 10px; */
+}
+
+/* Popup */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: auto; */
+  z-index: 1000; /* Add a higher z-index */
+}
+
+.popup-content {
+  /* width: auto;
+  height: auto; */
+  width: 400px;
+  height: 350px;
+  position: fixed;
+  padding: 5px;
+  border-radius: 8px;
+  z-index: 1001; /* Add a higher z-index */
+}
+
+@media screen and (max-width: 576px) {
+  .popup-content {
+    width: 400px;
+    height: 350px;
+    /* overflow-y: auto; */
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.ibizlogo {
+  width: 70px;
+  height: 70px;
+}
+
+.displytext {
+  margin: 0px;
+  background-image: linear-gradient(
+    to right,
+    rgb(44, 43, 43),
+    rgb(108, 108, 106)
+  );
+}
+
+.home-logo {
+  height: 50px;
+}
+
+.hr {
+  border-top: 3px dotted #000;
+  /*Rest of stuff here*/
+}
+table,
+th,
+td {
+  border: none; /* Removes borders from the table, table headers, and table cells */
 }
